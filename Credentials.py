@@ -6,3 +6,5 @@ class Credentials:
 
     def __init__(self):
         self.accounts = []
+
+    def generate_password(self, password_length=None):
