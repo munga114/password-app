@@ -9,3 +9,5 @@ class User(Credentials):
         self.username = None
         self.password = None
         self.token = None
+
+    def new_user(self, username, password):
