@@ -31,7 +31,11 @@ class Credentials:
     def generate_token(self):
         return token_hex(16)
 
+
     def add_account(self, account_name, username, password):
         account_details = {'account_name': account_name, 'username': username, 'password': password}
         self.accounts.append(account_details)
         return account_details
+
+    
+    def delete_account(self, account_name):
