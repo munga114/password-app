@@ -25,3 +25,7 @@ class Credentials:
                     continue
             except ValueError:
                 return f"You've provided an invalid input."
+    
+
+    @property
+    def generate_token(self):
