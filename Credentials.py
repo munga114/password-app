@@ -39,3 +39,13 @@ class Credentials:
 
     
     def delete_account(self, account_name):
+        if any(account['account_name'] == account_name for account in self.accounts):
+            user_input = input(f'Are you sure you want to delete your {account_name} account? (y/n): ').lower()
+            if user_input == 'y':
+                self.accounts = [ac for ac in self.accounts if not (ac.get('account_name') == account_name)]
+                print("Account was deleted successfully")
+                return self.accounts
+            else:
+                print('No account was deleted.')
+        else:
+            print("Account Not Found")
