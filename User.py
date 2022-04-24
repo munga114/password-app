@@ -11,3 +11,9 @@ class User(Credentials):
         self.token = None
 
     def new_user(self, username, password):
+        self.username = username
+        self.password = password
+        self.token = self.generate_token
+        print(f"Welcome {username}, An account has been created for you, you can use the following token for "
+              f"authentication.\n Your access token is {self.token} ")
+        return {'username': username, 'password': password}
