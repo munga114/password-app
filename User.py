@@ -42,3 +42,5 @@ class User(Credentials):
             return "Incorrect Username or password. Please try again"
 
     def logout(self):
+        print(f"You have {len(self.accounts)} accounts with us.")
+        return self.accounts
