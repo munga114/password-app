@@ -31,8 +31,8 @@ class User(Credentials):
                 except IndexError:
                     print('Account not found')
                     return 'Account not found'
-        else:
-            print('You have no account yet.')
+            else:
+                print('You have no account yet.')
     
     def login(self,username,password):
          if username == self.username and password == self.password:
