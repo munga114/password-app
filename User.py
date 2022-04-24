@@ -35,3 +35,8 @@ class User(Credentials):
             print('You have no account yet.')
     
     def login(self,username,password):
+         if username == self.username and password == self.password:
+            self.token = self.generate_token
+            return f"Welcome back {username}, you access token is {self.token}"
+        else:
+            return "Incorrect Username or password. Please try again"
