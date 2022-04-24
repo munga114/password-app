@@ -40,3 +40,5 @@ class User(Credentials):
             return f"Welcome back {username}, you access token is {self.token}"
         else:
             return "Incorrect Username or password. Please try again"
+
+    def logout(self):
