@@ -19,3 +19,17 @@ class User(Credentials):
         return {'username': username, 'password': password}
 
     def get_account_details(self, account_name):
+         if len(self.accounts) != 0:
+
+            if (acc['account_name'] == account_name for acc in self.accounts):
+                try:
+                    acc = list((acc for acc in self.accounts if acc['account_name'] == account_name))
+                    password = str(acc[0]['password'])
+                    cb.copy(password)
+                    print("Password has been copied to clipboard.")
+                    return acc[0]
+                except IndexError:
+                    print('Account not found')
+                    return 'Account not found'
+        else:
+            print('You have no account yet.')
