@@ -3,3 +3,6 @@ from secrets import choice, token_hex
 
 
 class Credentials:
+
+    def __init__(self):
+        self.accounts = []
