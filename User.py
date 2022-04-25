@@ -33,6 +33,16 @@ class User(Credentials):
                     return 'Account not found'
             else:
                 print('You have no account yet.')
+
+    def view_all_accounts(self):
+        if len(self.accounts) != 0:
+            for account in self.accounts: 
+                print(account["account_name"])
+                print(account["username"])
+                print(account["password"])
+        else:
+            print("There are no accounts to be viewed")
+
     
     def login(self,username,password):
          if username == self.username and password == self.password:
